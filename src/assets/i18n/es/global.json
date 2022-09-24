@@ -1,0 +1,44 @@
+{
+    "global" : {
+        "lblHouseWaySolutions" : "House Way Solutions",
+        "lblTraditionalInvesting" : "Inversión en Bienes Raíces Tradicionales",
+        "lblYes" : "Si",
+        "lblNo" : "No",
+        "lblNone" : "Ninguno"
+    },
+
+    "navbar" : {
+        "lblHome" : "Inicio",
+        "lblMarketplace" : "Marketplace",
+        "lblInvestors" : "Para Inversionistas"
+    },
+
+    "home" : {
+        "lblTitle" : "Marketplace mundial de acciones inmobiliarias",
+        "lblDescription" : "Permite a los propietarios acceder al valor de sus bienes inmobiliarios sin necesidad de prestamos e inversionistas inmobiliarios. Tienen la oportunidad de construir una cartera de bienes raíces residenciales fraccionados tokenizados.",
+        "lblButton" : "Ir al Marketplace"
+    },
+
+    "investors" : {
+        "section-1" : {
+            "lblTitle" : "Invierte de manera rapida y segura",
+            "lblDescription" : "Usa los beneficios del blockchain para inverte con poco capital y bajo riesgo en el mercado mas estable."
+        },
+        "section-2" : {
+            "lblTitle" : "Obten multiples beneficios inviertiendo en nuestra plataforma",
+            "table" : {
+                "row-1-col-1" : "Apreciación de la propiedad",
+                "row-2-col-1" : "Ingresos Pasivos",
+                "row-3-col-1" : "Riesgo Operativo",
+                "row-4-col-1" : "Gastos en Organizaciones",
+                "row-5-col-1" : "Impuestos",
+                "row-6-col-1" : "Liquidez",
+                "row-7-col-1" : "Toma de decisiones",
+                "row-3-col-3" : "Riesgo de opex, riesgo de capital, riesgo de arrendatario, riesgo de responsabilidad",
+                "row-4-col-3" : "Gestores de carteras, gestores de activos, contables, equipos jurídicos, etc.",
+                "row-5-col-3" : "Administradores de inversiones, administradores de propiedades, corredores, contratistas",
+                "row-6-col-3" : "Capital bloqueado de 8-10 años"
+            }
+        }
+    }
+}
