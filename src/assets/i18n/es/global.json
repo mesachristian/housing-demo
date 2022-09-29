@@ -4,7 +4,10 @@
         "lblTraditionalInvesting" : "Inversión en Bienes Raíces Tradicionales",
         "lblYes" : "Si",
         "lblNo" : "No",
-        "lblNone" : "Ninguno"
+        "lblNone" : "Ninguno",
+        "lblStart" : "Comenzar ya",
+        "lblGoToMarketplace" : "Ir al Marketplace",
+        "lblComingSoon" : "Coming Soon"
     },
 
     "navbar" : {
@@ -39,6 +42,18 @@
                 "row-5-col-3" : "Administradores de inversiones, administradores de propiedades, corredores, contratistas",
                 "row-6-col-3" : "Capital bloqueado de 8-10 años"
             }
+        },
+        "section-3" : {
+            "lblTitle" : "Adquiere tu NFT",
+            "lblAdvantage1" : "El NFT puede valorizarse por si solo dependiendo del mercado y el precio de la propiedad.",
+            "lblAdvantage2" : "Obten parte de la rentabilidad generada por la propiedad de manera periodica.",
+            "lblAdvantage3" : "Vende o compra NFT con toda libertad.",
+            "lblAdvantage4" : "Tu NFT será único y vendrá con su propio diseño JPG."
         }
+    },
+
+    "marketplace" : {
+
     }
+
 }

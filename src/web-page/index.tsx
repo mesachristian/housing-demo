@@ -13,7 +13,6 @@ import {
     Marketplace,
     SearchSection,
     HouseInfoSection,
-    HomeOwners,
     Investors
 } from './components';
 
@@ -39,13 +38,12 @@ const WebPage = () => {
                             <Route path='' element={<SearchSection />} />
                             <Route path='listings/:houseId' element={<HouseInfoSection />} />
                         </Route>
-                        <Route path='homeowners' element={<HomeOwners/>} />
                         <Route path='investors' element={<Investors/>} />
                     </Routes>
 
-                    <footer className='w-full flex flex-col justify-center items-center p-8 overflow-hidden bg-white'>
-                        <h4 className='text-xs text-primary-blue'>Copyright © 2022, House Way Solutions Inc. - All rights reserved</h4>
-                        <div className='mt-4 text-primary-blue'>
+                    <footer className='w-full flex flex-col justify-center items-center p-8 overflow-hidden bg-white z-10'>
+                        <h4 className='text-xs text-custom-dark-blue z-10'>Copyright © 2022, House Way Solutions Inc. - All rights reserved</h4>
+                        <div className='mt-4 text-custom-dark-blue'>
                             <i className="fab fa-facebook mr-4 scale-150"></i>
                             <i className="fab fa-instagram mr-4 scale-150"></i>
                             <i className="fab fa-linkedin mr-4 scale-150"></i>
