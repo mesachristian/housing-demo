@@ -12,7 +12,6 @@ import {
     Home,
     Marketplace,
     SearchSection,
-    HouseInfoSection,
     Investors
 } from './components';
 
@@ -27,7 +26,7 @@ const Wrapper = ({ children } : any) => {
 const WebPage = () => {
 
     return (
-        <div className='relative w-screen h-screen'>
+        <div className='relative w-screen h-screen font-poppins'>
             <BrowserRouter>
                 <Wrapper>
                     <Navbar />

@@ -44,7 +44,7 @@ const Home = () => {
           <div className="w-full h-full bg-[#141414] opacity-25"></div>
         </div>
 
-        <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-between items-center pt-40 pb-20 px-52"> 
+        <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-between items-center pt-32 pb-20 px-52"> 
           <h1 className="text-6xl text-white font-bold uppercase text-center">{translate("home.lblTitle")}</h1>
           
           <p className="text-3xl text-center text-primary-text font-semibold">{translate("home.lblDescription")}</p>
@@ -195,43 +195,8 @@ const Slider = ({ selectedIdx, changeSelectedIdx }: SliderProps) => {
   );
 };
 
-const Slider3D = () => {
-  const [imagesPositions, setImagesPositions] = useState([
-    "center-photo",
-    "right-photo",
-    "left-photo",
-  ]);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setImagesPositions((prevState) => [
-        prevState[2],
-        prevState[0],
-        prevState[1],
-      ]);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
-
-  return (
-    <div className="w-full h-full relative flex items-center">
-      <div
-        className={`bg-house-1 bg-center bg-contain bg-no-repeat bg-local absolute left-0 top-0 w-full h-3/5 m-auto trans-time ${imagesPositions[0]}`}
-      ></div>
-
-      <div
-        className={`bg-house-2 bg-center bg-cover bg-no-repeat bg-local absolute left-0 top-0 w-full h-3/5 m-auto trans-time ${imagesPositions[1]}`}
-      ></div>
-
-      <div
-        className={`bg-house-3 bg-center bg-cover bg-no-repeat bg-local absolute left-0 top-0 w-full h-3/5 m-auto trans-time ${imagesPositions[2]}`}
-      ></div>
-    </div>
-  );
-};
-
-const ITEM_WIDTH = 200;
-const ITEM_HEIGHT = 200;
+const ITEM_WIDTH = 170;
+const ITEM_HEIGHT = 170;
 const PADDING_X = 10;
 
 const PhotoScroll = (props: { imageData: string[] }) => {
@@ -271,7 +236,7 @@ const PhotoScroll = (props: { imageData: string[] }) => {
   // Render the items
   const renderedList = props.imageData.map((it, index) => (
     <div
-      className={`absolute sahdotransition-all duration-700 top-20 ease-out origin-center rounded-lg bg-no-repeat bg-contain bg-center bg-local my-2 cursor-pointer ${it}`}
+      className={`absolute sahdotransition-all duration-700 top-5 ease-out origin-center rounded-lg bg-no-repeat bg-contain bg-center bg-local my-2 cursor-pointer ${it}`}
       key={index}
       onClick={(e) => doSelect(index)}
       style={{

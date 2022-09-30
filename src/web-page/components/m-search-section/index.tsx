@@ -31,34 +31,34 @@ const SearchSection = () => {
                         <div className='col-span-2 grid grid-cols-4 gap-6'>
                             <label className='block'>
                                 <span className='mb-[7px] ml-4 text-[12px] text-white'>Market Value</span>
-                                <input className='h-[48px] flex items-center w-full bg-white py-2 px-5 text-sm rounded-full' placeholder='Min Value' />
+                                <input className='h-[48px] flex items-center w-full bg-white py-2 px-5 text-sm rounded-full outline-none' placeholder='Min Value' />
                             </label>
 
                             <label className='block'>
                                 <span className='mb-[7px] ml-4 text-[12px] text-transparent'>.</span>
-                                <input className='h-[48px] flex items-center w-full bg-white py-2 px-5 text-sm rounded-full' placeholder='Max Value' />
+                                <input className='h-[48px] flex items-center w-full bg-white py-2 px-5 text-sm rounded-full outline-none' placeholder='Max Value' />
                             </label>
 
                             <label className='block'>
                                 <span className='mb-[7px] ml-4 text-[12px] text-white'>Min y Max $/sqrt</span>
-                                <input className='h-[48px] flex items-center w-full bg-white py-2 px-5 text-sm rounded-full' placeholder='Min $/sqrt' />
+                                <input className='h-[48px] flex items-center w-full bg-white py-2 px-5 text-sm rounded-full outline-none' placeholder='Min $/sqrt' />
                             </label>
 
                             <label className='block'>
                                 <span className='mb-[7px] ml-4 text-[12px] text-transparent'>.</span>
-                                <input className='h-[48px] flex items-center w-full bg-white py-2 px-5 text-sm rounded-full' placeholder='Max $/sqrt' />
+                                <input className='h-[48px] flex items-center w-full bg-white py-2 px-5 text-sm rounded-full outline-none' placeholder='Max $/sqrt' />
                             </label>
                         </div>
 
                         <div className='grid grid-cols-2 gap-6'>
                             <label className='block'>
                                 <span className='mb-[7px] ml-4 text-[12px] text-white'>Property Age</span>
-                                <input className='h-[48px] flex items-center w-full bg-white py-2 px-5 text-sm rounded-full' placeholder='Min Value' />
+                                <input className='h-[48px] flex items-center w-full bg-white py-2 px-5 text-sm rounded-full outline-none' placeholder='Min Value' />
                             </label>
 
                             <label className='block'>
                                 <span className='mb-[7px] ml-4 text-[12px] text-transparent'>.</span>
-                                <input className='h-[48px] flex items-center w-full bg-white py-2 px-5 text-sm rounded-full' placeholder='Max Value' />
+                                <input className='h-[48px] flex items-center w-full bg-white py-2 px-5 text-sm rounded-full outline-none' placeholder='Max Value' />
                             </label>
                         </div>
                     </div>

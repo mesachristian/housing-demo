@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import { Outlet } from 'react-router-dom';
-import { useTranslation } from "react-i18next";
+// import { useTranslation } from "react-i18next";
 
 import './styles.css';
 
@@ -21,15 +21,11 @@ const housesList = [
 
 const Marketplace = () => {
 
-    function cardSelection() {
-        window.scrollTo(0, 0);
-    }
-
-    const [translate] = useTranslation();
+    // const [translate] = useTranslation();
 
     return (
 
-        <div className='relative w-full bg-gray-200  flex flex-col items-start justify-start py-24 z-0'>
+        <div className='relative w-full bg-gray-200  flex flex-col items-start justify-start py-20 z-0'>
 
             <Outlet />
 

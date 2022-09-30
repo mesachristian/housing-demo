@@ -361,12 +361,12 @@ const ImageSlider2 = forwardRef<ImageSlider2Interface, {}>((props, ref) => {
         <img
           alt=""
           src={IMAGES[nextImgIdx]}
-          className={`w-full ${transClass} rounded-2xl`}
+          className={`w-full ${transClass} rounded-2xl bg-contain`}
         ></img>
         <img
           alt=""
           src={IMAGES[imgIdx]}
-          className={`w-full ${transClass} rounded-2xl`}
+          className={`w-full ${transClass} rounded-2xl bg-contain`}
         ></img>
       </div>
     </div>
