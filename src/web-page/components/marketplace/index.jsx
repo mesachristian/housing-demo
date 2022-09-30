@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react'
 import { Outlet } from 'react-router-dom';
-import { Link } from 'react-router-dom';
 import { useTranslation } from "react-i18next";
 
 import './styles.css';
@@ -36,18 +35,18 @@ const Marketplace = () => {
 
             <div className='w-full mt-20 grid grid-cols-3 gap-5 px-24'>
                 {housesList.map((house, houseIdx) => {
-                    let url = 'listings/' + house.id;
+                    //let url = 'listings/' + house.id;
                     return (
                         <Fragment>
                             {
                                 houseIdx === 0 &&
-                                <Link key={houseIdx} to={url} onClick={cardSelection}>
-                                    <div className='bg-white rounded-2xl h-[480px] shadow-lg hover:scale-105 delay-75'>
-                                        <div className='bg-house-card bg-center bg-cover bg-no-repeat bg-local h-[60%] rounded-t-2xl'></div>
-                                        <div className='mt-4 h-[36%] flex flex-col justify-end items-center'>
+                                
+                                    <div className='bg-white rounded-2xl h-[500px] shadow-lg hover:scale-105 delay-75 flex flex-col justify-between'>
+                                        <div className='bg-real-houses bg-center bg-cover bg-no-repeat bg-local h-[60%] rounded-t-2xl'></div>
+                                        <div className='mt-8 h-[36%] flex flex-col justify-end items-center'>
                                             <div className='w-full flex flex-col items-start px-5'>
-                                                <p className='text-gray-500 text-base'>5404 La Patera Ln</p>
-                                                <p className='text-gray-500 text-sm'>Camarillo, CA 93012</p>
+                                                <p className='text-gray-500 text-base'>6930 Bennett Ln</p>
+                                                <p className='text-gray-500 text-sm'> Zephyrhills, FL 33541</p>
                                             </div>
 
                                             <div className='w-full px-5'>
@@ -82,7 +81,7 @@ const Marketplace = () => {
                                                 </div>
                                             </div>
 
-                                            <div className='w-full h-12 self-end border-t-[1px] border-t-[#dee2e6] grid grid-cols-3 mt-7'>
+                                            <div className='w-full h-12 self-end border-y-[1px] border-y-[#dee2e6] grid grid-cols-3 mt-7'>
                                                 <div className='border-r-[1px] border-gray-300 flex flex-col justify-start items-center'>
                                                     <p className='text-sm text-gray-900 font-bold'>8%</p>
                                                     <p className='text-xs text-gray-500'>1yr. ROI</p>
@@ -98,28 +97,31 @@ const Marketplace = () => {
                                                     <p className='text-xs text-gray-500'>1yr. ROI</p>
                                                 </div>
                                             </div>
+
+                                            <button onClick={() => {window.open('https://opensea.io/collection/hws-bennett', '_blank')?.focus()}} 
+                                            className='w-full py-2 text-lg border-t-[1px] border-t-[#dee2e6] 
+                                            bg-blue-600 text-custom-gray font-poppins font-normal rounded-b-2xl hover:brightness-150'>
+                                                Ir a Open Sea 🚢
+                                            </button>
                                         </div>
                                     </div>
-                                </Link>
+                                
                             }
 
                             {
                                 houseIdx !== 0 &&
-                                <div className='relative bg-white rounded-2xl h-[480px] shadow-lg hover:cursor-not-allowed'>
-                                    <div className='absolute top-0 left-0 h-full w-full z-10 flex items-center justify-center'>
-                                        <p className='rotate-[-30deg] mt-[-60px] text-5xl text-red-800 font-bold text-center    '>{translate("global.lblComingSoon")}...</p>
-                                    </div>
-                                    <div className='absolute top-0 left-0 h-full w-full z-0 opacity-60'>
-                                        <div className='bg-house-card bg-center bg-cover bg-no-repeat bg-local h-[60%] rounded-t-2xl'></div>
-                                        <div className='mt-4 h-[36%] flex flex-col justify-end items-center'>
+                                <div className='relative bg-white rounded-2xl h-[500px] shadow-lg hover:cursor-not-allowed'>
+                                    <div className='absolute top-0 left-0 h-full w-full z-0 opacity-60 flex flex-col justify-between'>
+                                        <div className='bg-under-cons bg-center bg-contain bg-no-repeat bg-local h-[60%] rounded-t-2xl'></div>
+                                        <div className='mt-8 h-[36%] flex flex-col justify-end items-center'>
                                             <div className='w-full flex flex-col items-start px-5'>
-                                                <p className='text-gray-500 text-base'>5404 La Patera Ln</p>
-                                                <p className='text-gray-500 text-sm'>Camarillo, CA 93012</p>
+                                                <p className='text-gray-500 text-base'>--- -- ------ --</p>
+                                                <p className='text-gray-500 text-sm'>--------, -- -----</p>
                                             </div>
 
                                             <div className='w-full px-5'>
                                                 <div className='w-full mt-2 bg-gray-200 rounded-full h-1.5 dark:bg-gray-700 flex flex-col'>
-                                                    <div className='bg-emerald-700 h-1.5 rounded-full' style={{ width: "80%" }}></div>
+                                                    <div className='bg-red-800 h-1.5 rounded-full' style={{ width: "50%" }}></div>
                                                 </div>
                                             </div>
 
@@ -132,7 +134,7 @@ const Marketplace = () => {
                                                         <path d="M12.8924 12.5562C13.506 12.5562 14.0035 12.0587 14.0035 11.4451C14.0035 10.8314 13.506 10.334 12.8924 10.334C12.2787 10.334 11.7812 10.8314 11.7812 11.4451C11.7812 12.0587 12.2787 12.5562 12.8924 12.5562Z" stroke="#DB6443" strokeLinecap="round" strokeLinejoin="round"></path>
                                                         <path d="M1.114 11.6665L2.48552 8.99526L5.22439 10.5563" stroke="#DB6443" strokeLinecap="round" strokeLinejoin="round"></path>
                                                     </svg>
-                                                    <p className='text-gray-500 ml-2 text-sm font-bold'>49%</p>
+                                                    <p className='text-gray-500 ml-2 text-sm font-bold'>--%</p>
                                                 </div>
 
                                                 <p className='text-gray-500 text-xs'>Equity Available</p>
@@ -145,26 +147,31 @@ const Marketplace = () => {
                                                         ><path d="M8.94971 8.63622C7.75848 8.54688 6.86791 7.62557 6.90502 6.5656C6.94213 5.50564 7.95209 4.71901 9.14333 4.80835C10.3346 4.89769 11.2251 5.819 11.188 6.87896" stroke="#DB6443" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"></path>
                                                         <path d="M8.94884 8.63401C10.1401 8.72335 11.0306 9.64466 10.9935 10.7046C10.9564 11.7646 9.94645 12.5512 8.75522 12.4619C7.56398 12.3725 6.67342 11.4512 6.71053 10.3913" stroke="#DB6443" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"></path>
                                                     </svg>
-                                                    <p className='text-gray-500 text-sm ml-2 font-bold'>$150,000</p>
+                                                    <p className='text-gray-500 text-sm ml-2 font-bold'>$---,---</p>
                                                 </div>
                                             </div>
 
                                             <div className='w-full h-12 self-end border-t-[1px] border-t-[#dee2e6] grid grid-cols-3 mt-7'>
                                                 <div className='border-r-[1px] border-gray-300 flex flex-col justify-start items-center'>
-                                                    <p className='text-sm text-gray-900 font-bold'>8%</p>
+                                                    <p className='text-sm text-gray-900 font-bold'>-%</p>
                                                     <p className='text-xs text-gray-500'>1yr. ROI</p>
                                                 </div>
 
                                                 <div className='border-r-[1px] border-gray-300 flex flex-col justify-start items-center'>
-                                                    <p className='text-sm text-gray-900 font-bold'>7.04%</p>
+                                                    <p className='text-sm text-gray-900 font-bold'>-.--%</p>
                                                     <p className='text-xs text-gray-500'>1yr. ROI</p>
                                                 </div>
 
                                                 <div className='border-r-[1px] border-gray-300 flex flex-col justify-start items-center'>
-                                                    <p className='text-sm text-gray-900 font-bold'>7.04%</p>
+                                                    <p className='text-sm text-gray-900 font-bold'>-.--%</p>
                                                     <p className='text-xs text-gray-500'>1yr. ROI</p>
                                                 </div>
                                             </div>
+
+                                            <button className='w-full py-2 text-lg border-t-[1px] border-t-[#dee2e6] 
+                                            bg-red-600 text-custom-gray font-poppins font-normal rounded-b-2xl hover:brightness-150 hover:cursor-not-allowed'>
+                                                Coming soon...
+                                            </button>
                                         </div>
                                     </div>
 
@@ -191,5 +198,8 @@ const Marketplace = () => {
         </div>
     );
 }
+
+//<Link key={houseIdx} to={url} onClick={cardSelection}>
+                                
 
 export default Marketplace;

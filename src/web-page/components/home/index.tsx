@@ -1,4 +1,6 @@
 import React, { Fragment, useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 // STYLES
 import "./styles.css";
@@ -14,6 +16,8 @@ const IMAGE_DATA = [
 ];
 
 const Home = () => {
+
+  const [translate] = useTranslation();
   const [stepIdx, setStepIdx] = useState(0);
 
   const changeStepIdx = (newStep: number) => {
@@ -36,18 +40,41 @@ const Home = () => {
   return (
     <Fragment>
       <div className="relative mt-20 w-full h-[650px] bg-white rounded-2xl shadow-lg">
-        <div className="h-full w-full bg-house-bg-home bg-cover">
+        <div className="h-full w-full bg-house-bg-home bg-cover bg-center">
           <div className="w-full h-full bg-[#141414] opacity-25"></div>
         </div>
 
-        <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center p-20">
+        <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-between items-center pt-40 pb-20 px-52"> 
+          <h1 className="text-6xl text-white font-bold uppercase text-center">{translate("home.lblTitle")}</h1>
           
+          <p className="text-3xl text-center text-primary-text font-semibold">{translate("home.lblDescription")}</p>
+
+          <Link to={'/marketplace'}>
+            <button className="inv-btn rounded-full flex items-center justify-center px-10 py-2 bg-custom-purple text-custom-gray text-xl font-semibold shadow-lg hover:bg-primary-title hover:text-white">
+                <span className="mr-1">{translate("home.lblButton")}</span>
+                <svg
+                  className="HoverArrow"
+                  width="13"
+                  height="13"
+                  viewBox="0 0 10 10"
+                  aria-hidden="true"
+                >
+                  <g fill-rule="evenodd">
+                    <path className="HoverArrow__linePath" d="M0 5h7"></path>
+                    <path
+                      className="HoverArrow__tipPath"
+                      d="M1 1l4 4-4 4"
+                    ></path>
+                  </g>
+                </svg>
+              </button>
+            </Link>
         </div>
       </div>
 
-      <div className="h-[88%] w-full bg-white flex flex-col">
-        <div className="w-full px-20 py-10">
-          <h1 className="w-full text-secondary-blue text-3xl font-extrabold text-center">
+      <div className="h-[100%] w-full bg-white flex flex-col">
+        <div className="w-full px-20 py-24">
+          <h1 className="w-full text-primary-title text-4xl font-extrabold text-center px-20">
             La herramienta que conecta a los dueños de las propiedades con
             inversionistas directamente usando las ventajas de Blockchain.
           </h1>
@@ -92,7 +119,7 @@ const Home = () => {
       </div>
 
       <div className="h-[88%] w-full flex">
-        <div className="h-full w-[63%] bg-light-blue px-20 py-14 flex flex-col justify-center items-start">
+        <div className="h-full w-[63%] bg-light-blue pl-32 pr-20 py-14 flex flex-col justify-center items-start">
           <h2 className="text-gray-900 text-2xl font-extrabold">
             Con solo 4 pasos puedes empezar a generar ganancias pasivas!
           </h2>
@@ -124,7 +151,7 @@ const Home = () => {
             })}
           </div>
         </div>
-        <div className="h-full w-[57%] bg-gray-700 p-20 pt-36pp">
+        <div className="h-full w-[57%] bg-gray-700 p-20 pt-36">
           <Slider selectedIdx={stepIdx} changeSelectedIdx={changeStepIdx} />
         </div>
       </div>
@@ -139,17 +166,17 @@ interface SliderProps {
 
 const Slider = ({ selectedIdx, changeSelectedIdx }: SliderProps) => {
   const stepImages = [
-    "bg-house-card",
-    "bg-house-portrait",
-    "bg-house-card",
-    "bg-house-search-bg",
+    "bg-house-model",
+    "bg-open-sea-logo",
+    "bg-nft",
+    "bg-valuation",
   ];
 
   return (
     <div className="h-full w-full flex flex-col justify-start items-center">
       <div
         className={
-          "h-5/6 w-full bg-center bg-cover bg-no-repeat bg-local " +
+          "h-5/6 w-full bg-center bg-contain bg-no-repeat bg-local " +
           stepImages[selectedIdx]
         }
       ></div>
@@ -189,7 +216,7 @@ const Slider3D = () => {
   return (
     <div className="w-full h-full relative flex items-center">
       <div
-        className={`bg-house-1 bg-center bg-cover bg-no-repeat bg-local absolute left-0 top-0 w-full h-3/5 m-auto trans-time ${imagesPositions[0]}`}
+        className={`bg-house-1 bg-center bg-contain bg-no-repeat bg-local absolute left-0 top-0 w-full h-3/5 m-auto trans-time ${imagesPositions[0]}`}
       ></div>
 
       <div
@@ -250,7 +277,7 @@ const PhotoScroll = (props: { imageData: string[] }) => {
       style={{
         width: ITEM_WIDTH,
         height: ITEM_HEIGHT,
-        boxShadow: "2px 10px 77px -6px rgba(0,0,0,0.85)",
+        boxShadow: "2px 10px 40px -6px rgba(0,0,0,0.85)",
         left: (ITEM_WIDTH + PADDING_X) * index,
       }}
     />

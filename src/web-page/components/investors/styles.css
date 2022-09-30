@@ -116,3 +116,8 @@
 .move-to-right{
     transform: translateX(100%);
 }
+
+.p2{
+    display: inline-grid;
+    grid-template-columns: auto auto;
+}

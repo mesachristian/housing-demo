@@ -16,6 +16,7 @@ import valuation from "assets/img/valuation.png";
 import openSeaLogo from "assets/img/open-sea-logo.png";
 import nftLogo from "assets/img/nft.png";
 import houseNft from "assets/img/house-nft-cute.png";
+import { Link } from "react-router-dom";
 
 interface ImageSlider2Interface {
   moveImages(): void;
@@ -161,7 +162,8 @@ const Investors = () => {
             </p>
 
             <div className="w-full flex justify-start">
-              <button className="inv-btn rounded-full flex items-center justify-center px-3 h-8 bg-custom-purple text-custom-gray font-semibold shadow-lg hover:bg-primary-title hover:text-white">
+              <button onClick={() => {window.open('https://opensea.io/collection/hws-bennett', '_blank')?.focus()}} 
+                className="inv-btn rounded-full flex items-center justify-center px-3 h-8 bg-custom-purple text-custom-gray font-semibold shadow-lg hover:bg-primary-title hover:text-white">
                 <span className="mr-1">{translate("global.lblStart")}</span>
                 <svg
                   className="HoverArrow"
@@ -179,6 +181,7 @@ const Investors = () => {
                   </g>
                 </svg>
               </button>
+              <Link to={'/marketplace'}>
               <button className="inv-btn rounded-full flex items-center justify-center px-3 h-8 text-custom-purple font-semibold hover:text-primary-title">
                 <span className="mr-1">{translate("global.lblGoToMarketplace")}</span>
                 <svg
@@ -197,7 +200,7 @@ const Investors = () => {
                   </g>
                 </svg>
               </button>
-              
+              </Link>
             </div>
           </div>
           <div className="w-6/12 h-full flex flex-col justify-between items-center z-10 px-16 pt-12 rounded-2xl">
@@ -257,13 +260,13 @@ const Investors = () => {
                     : "bg-warning-logo";
                   return (
                     <td className={style}>
-                      <div className="flex items-center">
-                        {colIdx !== 0 && (
+                      <div className="grid grid-cols-2 p2">
+                      {colIdx !== 0 && (
                           <div
-                            className={`${icon} w-[18px] h-[18px] mr-4`}
+                            className={`${icon} w-[17px] h-[17px] p-0 mr-4 self-center bg-contain bg-local bg-center`}
                           ></div>
-                        )}
-                        <p>{col.label}</p>
+                      )}
+                      <p className="text-left">{col.label}</p>
                       </div>
                     </td>
                   );

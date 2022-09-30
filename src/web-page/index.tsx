@@ -36,7 +36,9 @@ const WebPage = () => {
                         <Route path='/' element={<Home />} />
                         <Route path='marketplace' element={<Marketplace />}>
                             <Route path='' element={<SearchSection />} />
-                            <Route path='listings/:houseId' element={<HouseInfoSection />} />
+                            {
+                                //<Route path='listings/:houseId' element={<HouseInfoSection />} />
+                            }
                         </Route>
                         <Route path='investors' element={<Investors/>} />
                     </Routes>
